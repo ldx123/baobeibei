@@ -1,0 +1,51 @@
+.g-footer {
+  border-top: 1px solid #DDD;
+  background-color: #F9F9F9;
+  margin-top: 30px;
+}
+.m-footer {
+  width: 991px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.z-link {
+  margin-left: -1px;
+  width: 1200px;
+}
+.z-link dl {
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 0px 10px;
+  width: 230px;
+  color: #666;
+  line-height: 26px;
+  display: inline;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #E6E6E6;
+  overflow: hidden;
+  height: 162px;
+}
+.z-link dt {
+  font-size: 16px;
+  font-family: "微软雅黑";
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.z-link s {
+  background: url(../img/surprise.png) no-repeat;
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.z-link .cat {
+  background-position: 0px -215px;
+}
+.z-link dd {
+  width: 145px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 32px;
+}

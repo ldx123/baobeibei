@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宝贝</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+     <div class="m-topnav">
+           <div class="g-warp m-top-nav">
+               <div class="loginnva fl">
+                   <a class="index" href="">首页</a>
+                   [<a href="">登录</a>]
+                   [<a href="">免费注册</a>]
+               </div>
+               <div class="m-top-muen fr">
+                   <a href="">我的中心</a>
+                   <a class="shoping" href="">购物车</a>
+                   <a class="favorite" href="">收藏夹</a>
+                   <a class="pay" href="">互联支付</a>
+                   <a class="help" href="">帮助</a>
+               </div>
+           </div>
+     </div>
+     <div class="g-hd">
+        <div class="g-warp m-hd">
+            <a href=""><img src="img/logo.png" alt=""></a>
+            <div class="m-sch">
+                <div class="u-sch">
+                     <span class="iconfont sch-icon">&#xe606;</span>
+                    <input class="sch-text"  type="text" name="" value=""/>
+                    <input class="sch-btn" type="submit" value="搜索"/>
+                </div>
+                <div class="m-keyword">
+                  <span>热门搜索：</span>
+                  <a href="">孕妇装</a>
+                  <a href="">奶瓶</a>
+                  <a href="">连体衣</a>
+                  <a href="">背带</a>
+                </div>
+            </div>
+        </div>
+        <div class="m-nav">
+              <ul class="g-warp nav">
+                <li class="type fl">
+                  <a class="z-crt" href="">全部分类</a>
+                  <div class="m-sub-nav">
+                    <dl>
+                      <dt>奶粉纸尿</dt>
+                        <dd>
+                          <a href="">羊奶粉</a> <a href="">早产儿</a><a href="">抗过敏</a>
+                        </dd>
+                      <dt>孕妇用品</dt>
+                        <dd>
+                          <a href="">孕妇奶粉</a> <a href="">DHA</a>
+                          <a href="">叶酸</a><a href="">维生素</a>
+                        </dd>
+                      <dt>喂养洗护</dt>
+                        <dd>
+                          <a href="">奶瓶</a><a href="">奶嘴</a>
+                          <a href="">围嘴/食饭兜</a><a href="">理发器</a>
+                        </dd>
+                      <dt>童车童床</dt>
+                       <dd>
+                          <a href="">四轮推车</a><a href="">三轮推车</a>
+                          <a href="">安全座椅</a><a href="">背带</a>
+                        </dd>
+                      <dt>玩具文娱</dt>
+                        <dd>
+                          <a href="">床铃/摇铃</a><a href="">玩偶</a>
+                          <a href="">爬行垫</a><a href="">知识挂图</a>
+                        </dd>
+                      <dt>童装童鞋</dt>
+                        <dd>
+                          <a href="">连身衣</a><a href="">婴儿内衣</a>
+                          <a href="">婴儿礼盒</a>
+                        </dd>
+                    </dl>
+                  </div>
+                </li>
+                <li class="each  fl"><a class="crt" href="">首页</a></li>
+                <li class="each fl"><a href="">新平上市</a></li>
+                <li class="each fl"><a href="">童装特卖</a></li>
+              </ul>
+        </div>
+     </div>
+     <div class="g-warp m-banner">
+        <div class="m-mad">
+          <div class="m-mad-run">
+            <ul class="ImgLoad">
+              <li><a href=""><img src="img/banner1.png"/></a></li>
+              <li><a href=""><img src="img/banner2.png"/></a></li>
+              <li><a href=""><img src="img/banner3.png"/></a></li>
+            </ul>
+          </div>
+          <ul class="m-mad-con">
+              <li class="cur">1</li>
+              <li >2</li>
+              <li >3</li>
+          </ul>
+        </div>
+        <script>
+
+            $(".ImgLoad img").hide();
+            $(".ImgLoad img").eq(0).show();
+            var n=0;
+            function showImg(){
+              if(n<$(".ImgLoad img").length-1){
+              n++;
+              }else{
+              n=0;
+              }
+              $(".ImgLoad img").hide();
+              $(".ImgLoad img").eq(n).show();
+              $(".m-mad-con li").removeClass("cur");
+              $(".m-mad-con li").eq(n).addClass("cur");
+            }
+            $(".m-mad-con li").click(function(){
+              $(".m-mad-con li").removeClass("cur");
+              $(this).addClass("cur");
+              n=$(".m-mad-con li").index(this);
+              $(".ImgLoad img").hide();
+              $(".ImgLoad img").eq(n).show();
+              })
+            setInterval(showImg,3000);
+
+          //   function run(){
+          //   $(".ImgLoad").animate({top:-244},3000,
+          //   function(){
+          //     $(".ImgLoad").css({top:0});
+          //     $(".ImgLoad a:first").insertAfter($(".ImgLoad a:last"));
+          //     });
+          //   }
+          // var timer=setInterval(run,4000);
+          // $(".m-mad-run").mousemove(function(){
+          //   clearInterval(timer);
+          //   }).mouseout(function(){
+          //   timer=setInterval(run,4000);
+          //   });
+        </script>
+        <div class="m-info">
+          <div class="m-notice">
+              <ul class="z-tab">
+                <li>公告</li>
+                <li>规则</li>
+                <li>帮助</li>
+              </ul>
+              <div class="z-con">
+                  <div class="con" >
+                    <ul>
+                      <li><a href="">关于我们</a></li>
+                      <li><a href="">关于我们</a></li>
+                      <li><a href="">关于我们</a></li>
+                    </ul>
+                  </div>
+                  <div class="con" >
+                    <ul>
+                      <li><a href="">法律声明</a></li>
+                      <li><a href="">法律声明</a></li>
+                      <li><a href="">法律声明</a></li>
+                    </ul>
+                  </div>
+                  <div class="con" >
+                    <ul>
+                      <li><a href="">常见问题</a></li>
+                      <li><a href="">常见问题</a></li>
+                      <li><a href="">常见问题</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+          <script>
+          /*只显示一个li*/
+             $(".z-tab li").removeClass('sel');
+             $(".z-tab li:first").addClass('sel');
+          /*显示对应文本*/
+             $(".z-con .con").hide();
+             $(".z-con .con:first").show();
+             $(".z-tab li").hover(function(){
+                  $(".z-tab li").removeClass('sel');
+                  $(this).addClass('sel');
+                  var n=$(".z-tab li").index(this);
+                  $(".z-con .con").hide();
+                  $(".z-con .con").eq(n).show();
+              });
+          </script>
+          <div class="m-user-login">
+            <img src="img/user.png" alt="">
+            <div class="loginInfo">
+              <h2>Hi，欢迎来到宝贝贝</h2>
+              <p>你还未登录哦~</p>
+            </div>
+            <div class="login-btn">
+              <a class="u-btn login-icon" href="">登录</a>
+              <a class="u-btn" href="">免费注册</a>
+              <a class="u-btn" href="">免费开店</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="m-adshow">
+          <ul>
+            <li><a href=""><img src="img/show1.png" alt=""></a></li>
+            <li><a href=""><img src="img/show1.png" alt=""></a></li>
+            <li><a href=""><img src="img/show1.png" alt=""></a></li>
+            <li><a href=""><img src="img/show1.png" alt=""></a></li>
+            <li><a href=""><img src="img/show1.png" alt=""></a></li>
+          </ul>
+        </div>
+     </div>
+     <div class="g-warp  m-new-good">
+          <div class="m-tt">
+              <h1 class="new">新品上线</h1><a href="">更多&nbsp;&gt;</a>
+          </div>
+          <div class="m-goods-list">
+              <ul class="j_ImgLoad">
+                  <li>
+                      <a target="_blank" href="" title="" class="goods-info fl">
+                          <img src="img/img1.png" />
+                          <h4>安斯沛克 婴儿内衣套装 宝宝合同套装 贴身衣服 春秋冬 纯棉内衣</h4>
+                      </a>
+                      <div class="price fl">
+                          <span class="new-price fl">
+                              <em>¥29.50</em>
+                          </span>
+                          <del class="fr">¥108.00</del>
+                      </div>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="" title="" class="goods-info fl">
+                          <img src="img/img1.png" />
+                          <h4>安斯沛克 婴儿内衣套装 宝宝合同套装 贴身衣服 春秋冬 纯棉内衣</h4>
+                      </a>
+                      <div class="price fl">
+                          <span class="new-price fl">
+                              <em>¥29.50</em>
+                          </span>
+                          <del class="fr">¥108.00</del>
+                      </div>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="" title="" class="goods-info fl">
+                          <img src="img/img1.png" />
+                          <h4>安斯沛克 婴儿内衣套装 宝宝合同套装 贴身衣服 春秋冬 纯棉内衣</h4>
+                      </a>
+                      <div class="price fl">
+                          <span class="new-price fl">
+                              <em>¥29.50</em>
+                          </span>
+                          <del class="fr">¥108.00</del>
+                      </div>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="" title="" class="goods-info fl">
+                          <img src="img/img1.png" />
+                          <h4>安斯沛克 婴儿内衣套装 宝宝合同套装 贴身衣服 春秋冬 纯棉内衣</h4>
+                      </a>
+                      <div class="price fl">
+                          <span class="new-price fl">
+                              <em>¥29.50</em>
+                          </span>
+                          <del class="fr">¥108.00</del>
+                      </div>
+                  </li>
+                  <li>
+                      <a target="_blank" href="" title="" class="goods-info fl">
+                          <img src="img/img1.png" />
+                          <h4>安斯沛克 婴儿内衣套装 宝宝合同套装 贴身衣服 春秋冬 纯棉内衣</h4>
+                      </a>
+                      <div class="price fl">
+                          <span class="new-price fl">
+                              <em>¥29.50</em>
+                          </span>
+                          <del class="fr">¥108.00</del>
+                      </div>
+                  </li>
+
+              </ul>
+          </div>
+     </div>
+     <div class="g-warp  m-limit-sell">
+       <div class="m-tt">
+          <h1 class="tm" >限量特卖</h1><a href="">更多&nbsp;&gt;</a>
+       </div>
+          <ul class="j_ImgLoad">
+            <li class="sell-item">
+              <a href=""><img src="" alt=""></a>
+              <div class="good-hot">
+                <h3>精挑细选</h3>
+                <fieldset>
+                  <legend align="center">●</legend>
+                </fieldset>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好宝贝，就要好衣装</p>
+              </div>
+            </li>
+            <li class="sell-item">
+              <a href=""><img src="" alt=""></a>
+              <div class="good-hot">
+                <h3>精挑细选</h3>
+                <fieldset>
+                  <legend align="center">●</legend>
+                </fieldset>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好宝贝，就要好衣装</p>
+              </div>
+            </li>
+          </ul>
+     </div>
+     <div class="g-warp  m-brand">
+       <div class="m-tt">
+          <h1 class="pp" >品牌馆</h1><a href="">更多&nbsp;&gt;</a>
+       </div>
+         <div class="brand-list">
+             <ul class="brand-list-tag">
+                 <li class="z-link-crt"><span class="it1"></span><i></i>热卖品牌</li>
+                 <li><span class="it2"></span><i></i>特卖品牌</li>
+                 <li><span class="it3"></span><i></i>最新入驻</li>
+                 <li><span class="it4"></span><i></i>即将入住</li>
+             </ul>
+             <div class="brand-list-con">
+                 <ul class="con">
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                 </ul>
+                 <ul class="con">
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                 </ul>
+                 <ul class="con">
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                 </ul>
+                 <ul class="con">
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="brand-img"><img src="" alt=""/></div>
+     </div>
+     <div class="g-footer">
+         <div class="m-footer">
+             <div class="z-link">
+                 <dl>
+                     <dt><s class="cat"></s> 购物指南</dt>
+                     <dd><a href="">购物流程</a></dd>
+                     <dd><a href="">会员注册</a></dd>
+                     <dd><a href="">常见问题</a></dd>
+                 </dl>
+                 <dl>
+                     <dt><s class="cat"></s> 购物指南</dt>
+                     <dd><a href="">购物流程</a></dd>
+                     <dd><a href="">会员注册</a></dd>
+                     <dd><a href="">常见问题</a></dd>
+                 </dl>
+                 <dl>
+                     <dt><s class="cat"></s> 购物指南</dt>
+                     <dd><a href="">购物流程</a></dd>
+                     <dd><a href="">会员注册</a></dd>
+                     <dd><a href="">常见问题</a></dd>
+                 </dl>
+                 <dl>
+                     <dt><s class="cat"></s> 购物指南</dt>
+                     <dd><a href="">购物流程</a></dd>
+                     <dd><a href="">会员注册</a></dd>
+                     <dd><a href="">常见问题</a></dd>
+                 </dl>
+             </div>
+         </div>
+     </div>
+</body>
+</html>
