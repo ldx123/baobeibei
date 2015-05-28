@@ -54,8 +54,9 @@ img {
 @font-face {
   font-family: 'iconfont';
   src: url('//at.alicdn.com/t/font_1429513154_233409.eot');
-  /* IE9*/
   src: url('//at.alicdn.com/t/font_1429513154_233409.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1429513154_233409.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1429513154_233409.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1429513154_233409.svg#iconfont') format('svg');
+  
+  /* IE9*/
   /* iOS 4.1- */
 }
 .iconfont {
@@ -265,15 +266,19 @@ img {
 }
 .m-banner {
   margin-top: 10px;
-  padding-left: 380px;
+  padding-left: 200px;
   overflow: hidden;
+}
+.z-mad {
+  width: 748px;
+  height: 240px;
+  position: relative;
+  float: left;
 }
 .m-mad {
   width: 750px;
-  float: left;
-  overflow: hidden;
-  margin-left: 10px;
   height: 240px;
+  overflow: hidden;
   position: relative;
 }
 .m-mad .m-mad-run {
@@ -283,14 +288,14 @@ img {
 .m-mad .m-mad-run .ImgLoad {
   height: 240px;
 }
-.m-mad .m-mad-con {
+.m-mad-con {
   height: 18px;
   position: absolute;
   bottom: 10px;
   right: 10px;
   cursor: pointer;
 }
-.m-mad .m-mad-con li {
+.m-mad-con li {
   float: left;
   background-color: #FF637C;
   list-style: outside none none;
@@ -301,7 +306,7 @@ img {
   text-align: center;
   margin-left: 10px;
 }
-.m-mad .m-mad-con li.cur {
+.m-mad-con li.cur {
   background-color: #E53363;
 }
 .m-info {
@@ -397,7 +402,6 @@ img {
 }
 .m-adshow {
   float: left;
-  margin-left: 10px;
   margin-top: 10px;
   height: 118px;
   width: 990px;

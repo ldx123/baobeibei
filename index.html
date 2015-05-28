@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en"
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>宝贝</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
 </head>
 <body>
      <div class="m-topnav">
@@ -85,83 +86,69 @@
               </ul>
         </div>
      </div>
-     <div class="g-warp m-banner">
-        <div class="m-mad">
-          <div class="m-mad-run">
-            <ul class="ImgLoad">
-              <li><a href=""><img src="img/banner1.png"/></a></li>
-              <li><a href=""><img src="img/banner2.png"/></a></li>
-              <li><a href=""><img src="img/banner3.png"/></a></li>
-            </ul>
-          </div>
-          <ul class="m-mad-con">
-              <li class="cur">1</li>
-              <li >2</li>
-              <li >3</li>
-          </ul>
-        </div>
-        <script>
-
-            $(".ImgLoad img").hide();
-            $(".ImgLoad img").eq(0).show();
-            var n=0;
-            function showImg(){
-              if(n<$(".ImgLoad img").length-1){
-              n++;
-              }else{
-              n=0;
-              }
-              $(".ImgLoad img").hide();
-              $(".ImgLoad img").eq(n).show();
-              $(".m-mad-con li").removeClass("cur");
-              $(".m-mad-con li").eq(n).addClass("cur");
-            }
-            $(".m-mad-con li").click(function(){
-              $(".m-mad-con li").removeClass("cur");
-              $(this).addClass("cur");
-              n=$(".m-mad-con li").index(this);
-              $(".ImgLoad img").hide();
-              $(".ImgLoad img").eq(n).show();
-              })
-            setInterval(showImg,3000);
-
-          //   function run(){
-          //   $(".ImgLoad").animate({top:-244},3000,
-          //   function(){
-          //     $(".ImgLoad").css({top:0});
-          //     $(".ImgLoad a:first").insertAfter($(".ImgLoad a:last"));
-          //     });
-          //   }
-          // var timer=setInterval(run,4000);
-          // $(".m-mad-run").mousemove(function(){
-          //   clearInterval(timer);
-          //   }).mouseout(function(){
-          //   timer=setInterval(run,4000);
-          //   });
-        </script>
+     <div class="g-warp">
+        <div class="m-banner">
+            <div class="z-mad">
+               <div id="feng" class="m-mad">
+                  <div  id="feng1" class="m-mad-run">
+                        <ul  class="ImgLoad">
+                          <li><a href=""><img src="img/banner1.png"/></a></li>
+                          <li><a href=""><img src="img/banner2.png"/></a></li>
+                          <li><a href=""><img src="img/banner3.png"/></a></li>
+                        </ul>
+                  </div>
+                  <div id="feng2" > </div>
+              </div>
+              <ul id="m-mad-con" class="m-mad-con">
+                  <li class="cur">1</li>
+                  <li >2</li>
+                  <li >3</li>
+              </ul>
+            </div>
+         <!-- <script>
+         window.onload=function () {
+             var speed=20
+             var feng=document.getElementById("feng");
+             var feng2=document.getElementById("feng2");
+             var feng1=document.getElementById("feng1");
+             // feng2.innerHTML=feng1.innerHTML;
+             // alert(feng.scrollTop);
+             function Marquee(){
+                 if(feng.scrollTop>=2*feng2.offsetTop)
+                     feng.scrollTop=0;
+                 else{
+                     feng.scrollTop++;
+                 }
+             }
+             var MyMar=setInterval(Marquee,speed);
+             feng.onmouseover=function() {clearInterval(MyMar)};
+             feng.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+         };
+         </script> -->
+       
         <div class="m-info">
           <div class="m-notice">
-              <ul class="z-tab">
-                <li>公告</li>
+              <ul id="z-tab" class="z-tab">
+                <li class="sel">公告</li>
                 <li>规则</li>
                 <li>帮助</li>
               </ul>
-              <div class="z-con">
+              <div id="z-con" class="z-con">
                   <div class="con" >
-                    <ul>
+                    <ul >
                       <li><a href="">关于我们</a></li>
                       <li><a href="">关于我们</a></li>
                       <li><a href="">关于我们</a></li>
                     </ul>
                   </div>
-                  <div class="con" >
+                  <div class="con" style="display: none" >
                     <ul>
                       <li><a href="">法律声明</a></li>
                       <li><a href="">法律声明</a></li>
                       <li><a href="">法律声明</a></li>
                     </ul>
                   </div>
-                  <div class="con" >
+                  <div class="con" style="display: none">
                     <ul>
                       <li><a href="">常见问题</a></li>
                       <li><a href="">常见问题</a></li>
@@ -170,21 +157,6 @@
                   </div>
               </div>
           </div>
-          <script>
-          /*只显示一个li*/
-             $(".z-tab li").removeClass('sel');
-             $(".z-tab li:first").addClass('sel');
-          /*显示对应文本*/
-             $(".z-con .con").hide();
-             $(".z-con .con:first").show();
-             $(".z-tab li").hover(function(){
-                  $(".z-tab li").removeClass('sel');
-                  $(this).addClass('sel');
-                  var n=$(".z-tab li").index(this);
-                  $(".z-con .con").hide();
-                  $(".z-con .con").eq(n).show();
-              });
-          </script>
           <div class="m-user-login">
             <img src="img/user.png" alt="">
             <div class="loginInfo">
@@ -208,6 +180,7 @@
             <li><a href=""><img src="img/show1.png" alt=""></a></li>
           </ul>
         </div>
+     </div>
      </div>
      <div class="g-warp  m-new-good">
           <div class="m-tt">
@@ -314,16 +287,20 @@
           <h1 class="pp" >品牌馆</h1><a href="">更多&nbsp;&gt;</a>
        </div>
          <div class="brand-list">
-             <ul class="brand-list-tag">
+             <ul id="brand-list-tag" class="brand-list-tag">
                  <li class="z-link-crt"><span class="it1"></span><i></i>热卖品牌</li>
                  <li><span class="it2"></span><i></i>特卖品牌</li>
                  <li><span class="it3"></span><i></i>最新入驻</li>
                  <li><span class="it4"></span><i></i>即将入住</li>
              </ul>
-             <div class="brand-list-con">
+             <div id="brand-list-con" class="brand-list-con">
                  <ul class="con">
                      <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
                      <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                 </ul>
+                 <ul class="con">
+                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <!--<li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>-->
                  </ul>
                  <ul class="con">
                      <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
@@ -331,14 +308,11 @@
                  </ul>
                  <ul class="con">
                      <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
-                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
-                 </ul>
-                 <ul class="con">
-                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
-                     <li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>
+                     <!--<li><a href=""><img src="" alt=""/><p>聚网盈母婴官方旗舰店</p></a></li>-->
                  </ul>
              </div>
          </div>
+
          <div class="brand-img"><img src="" alt=""/></div>
      </div>
      <div class="g-footer">
