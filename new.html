@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>童装</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="m-topnav">
+       <div class="g-warp m-top-nav">
+           <div class="loginnva fl">
+               <a class="index" href="">首页</a>
+               [<a href="">登录</a>]
+               [<a href="">免费注册</a>]
+           </div>
+           <div class="m-top-muen fr">
+               <a href="">我的中心</a>
+               <a class="shoping" href="">购物车</a>
+               <a class="favorite" href="">收藏夹</a>
+               <a class="pay" href="">互联支付</a>
+               <a class="help" href="">帮助</a>
+           </div>
+       </div>
+    </div>
+     <div class="g-hd">
+        <div class="g-warp m-hd">
+            <a href=""><img src="img/logo.png" alt=""></a>
+            <div class="m-sch">
+                <div class="u-sch">
+                     <span class="sch-icon"></span>
+                    <input class="sch-text"  type="text" name="" value=""/>
+                    <input class="sch-btn" type="submit" value="搜索"/>
+                </div>
+                <div class="m-keyword">
+                  <span>热门搜索：</span>
+                  <a href="">孕妇装</a>
+                  <a href="">奶瓶</a>
+                  <a href="">连体衣</a>
+                  <a href="">背带</a>
+                </div>
+            </div>
+        </div>
+        <div class="m-nav">
+          <ul class="g-warp nav">
+            <li class="each  fl"><a  href="index.html">首页</a></li>
+            <li class="each fl"><a class="crt" href="new.html">新品上市</a></li>
+            <li class="each fl"><a  href="baby.html">童装特卖</a></li>
+          </ul>
+        </div>
+     </div>
+    <div class="g-warp">
+        <div class="now-tit">当前位置：<a href="#">全部分类</a> > <a href="#">新品</a></div>
+    </div>
+    <div class="g-warp">
+        <div class="clearfix">
+            <div class="m-allType clearfix">
+                <h4 class="fl">分类</h4>
+                <div class="m-type-main">
+                    <dl>  
+                        <dt><a class="z-crt1" href="#">
+                            <b>幼婴</b>
+                            <img src="img/baby.png" width="80" height="80"></a>
+                        </dt>
+                        <dd>
+                            <a href="#">内衣</a>
+                            <a href="#">连身衣</a>
+                            <a href="#">礼盒</a>
+                            <a href="#">大PP裤</a>
+                            <a href="#">外出服</a>
+                            <a href="#">套装</a>
+                            <a href="#">造型衣</a>
+                            <a href="#">罩衣</a>
+                            <a href="#">蚕丝棉袄</a>
+                            <a href="#">摄影服</a>
+                            <a href="#">婴儿袜</a>
+                        </dd>
+                    </dl>   
+                    <dl>  
+                        <dt><a class="z-crt1" href="#">
+                            <b>儿童装</b>
+                            <img src="img/new.png" width="80" height="80"></a>
+                        </dt>
+                        <dd>
+                            <a href="#">亲子装</a>
+                            <a href="#">运动</a>
+                            <a href="#">休闲</a>
+                            <a href="#">学院</a>
+                            <a href="#">长袖套装</a>
+                            <a href="#">米奇套装</a>
+                            <a href="#">亲子</a>
+                            <a href="#">母子</a>
+                            <a href="#">母女</a>
+                            <a href="#">校服</a>
+                            <a href="#">小童套装</a>
+                            <a href="#">中童套装</a>
+                            <a href="#">大童套装</a>
+                            <a href="#">女童套装</a>
+                            <a href="#">男童套装</a>
+                            <a href="#">条纹套装</a>
+                            <a href="#">女童套装</a>
+                            <a href="#">男童套装</a>
+                        </dd>
+                    </dl>                      
+                </div>
+            </div>
+            <div class="shop_con_list">
+                <input type="hidden" name="app" value="search">
+                <input type="hidden" name="act" value="index">
+                <h2>
+                    <div>
+                        <div class="table_title">
+                            <ul class="sort-item fl">
+                                <li>
+                                    <a href="javascript:" class="price" id="sales_box" data-t="1">销量<em class="icon-arr-down"></em></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" class="price" id="price_box" data-t="2">价格<em class="icon-arr-down"></em></a> 
+                                 </li>
+                                 <li>
+                                    <a href="javascript:" class="price" id="pop_box" data-t="3">人气<em class="icon-arr-down"></em></a> 
+                                 </li>
+                                 <li>
+                                    <a href="javascript:" class="price" id="time_box" data-t="4">新品<em class="icon-arr-down"></em></a> 
+                                </li>
+                            </ul>
+                            <div class="price-input fl">
+                                <!-- <input type="hidden" name="s-cate" value="2882" id="s-cate">
+                                <input type="hidden" name="s-keyword" value="" id="s-keyword">  
+                                <input type="hidden" name="s-price" value="" id="s-price"> 
+                                <input type="hidden" name="e-price" value="" id="e-price">  
+                                <input type="hidden" name="s-type" value="" id="s-type"> 
+                                <input type="hidden" name="s-order" value="" id="s-order"> -->
+                                <input type="text" value="" id="startPrice" class="txt" placeholder="￥" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value = this.value.replace(/\D/g, '')"> <span>-</span> 
+                                <input type="text" value="" id="endPrice" class="txt" placeholder="￥" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value = this.value.replace(/\D/g, '')"> 
+                                <input type="button" value="确定" class="u-btn" id="inner-search-btn">
+                            </div>
+                            <label for="postbox" class="fl postage_box ">
+                                <input id="postage" type="hidden" value="0" name="postage">
+                                <input type="checkbox" id="postbox">
+                                包邮
+                            </label>
+                        </div>
+                    </div>
+                </h2>
+                <div class="m-goods-list j_ImgLoad">
+                    <ul>                      
+                        <li>
+                            <a target="_blank" href="#" title="" class="goods-info fl">
+                                <img src="img/goods3.jpg">
+                                <h4>纯棉宝宝罩衣防水围裙春秋新款儿童反穿衣长袖婴儿吃饭衣画画围兜</h4>
+                            </a>
+                            <div class="price fl">
+                                <span class="new-price fl">
+                                    <em>¥19.80</em>
+                                </span>
+                                <del class="f-fr">¥109.00</del>
+                            </div>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#" title="" class="goods-info fl">
+                                <img src="img/goods4.jpg">
+                                <h4>纯棉宝宝罩衣防水围裙春秋新款儿童反穿衣长袖婴儿吃饭衣画画围兜</h4>
+                            </a>
+                            <div class="price fl">
+                                <span class="new-price fl">
+                                    <em>¥19.80</em>
+                                </span>
+                                <del class="f-fr">¥109.00</del>
+                            </div>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#" title="" class="goods-info fl">
+                                <img src="img/goods5.jpg">
+                                <h4>纯棉宝宝罩衣防水围裙春秋新款儿童反穿衣长袖婴儿吃饭衣画画围兜</h4>
+                            </a>
+                            <div class="price fl">
+                                <span class="new-price fl">
+                                    <em>¥19.80</em>
+                                </span>
+                                <del class="f-fr">¥109.00</del>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <a target="_blank" href="#" title="" class="goods-info fl">
+                                <img src="img/img5.jpg">
+                                <h4>纯棉宝宝罩衣防水围裙春秋新款儿童反穿衣长袖婴儿吃饭衣画画围兜</h4>
+                            </a>
+                            <div class="price fl">
+                                <span class="new-price fl">
+                                    <em>¥19.80</em>
+                                </span>
+                                <del class="f-fr">¥109.00</del>
+                            </div>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#" title="" class="goods-info fl">
+                                <img src="img/goods2.jpg">
+                                <h4>纯棉宝宝罩衣防水围裙春秋新款儿童反穿衣长袖婴儿吃饭衣画画围兜</h4>
+                            </a>
+                            <div class="price fl">
+                                <span class="new-price fl">
+                                    <em>¥19.80</em>
+                                </span>
+                                <del class="f-fr">¥109.00</del>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop_list_page">
+                    <div class="u-pageMain">
+                        <a href="javascript:;" class="u-sel">1</a>
+                        <a title="查看第2页" href="#">2</a>
+                        <a title="查看第3页" href="#">3</a>
+                        <a title="查看第4页" href="#">4</a>
+                        <a title="查看第5页" href="#">5</a>
+                        <span class="u-etc">...</span>
+                        <a title="查看第8页" href="#">8</a>
+                        <a title="查看第2页" class="u-next" href="#"><span>下一页&nbsp;&gt;</span><b class="trigon"></b></a>
+                        <span class="u-go-page"><em>共 8 页</em></span>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+     <a id="backToTop" title="回到顶部"  href="javascript:;"><i>回到顶部</i><span class="I-ico"></span></a>
+     <div class="g-footer">
+        <div class="m-footer">
+            <div class="z-link">
+                <dl>
+                    <dt><s class="cat"></s> 购物指南</dt>
+                    <dd><a href="">购物流程</a></dd>
+                    <dd><a href="">会员注册</a></dd>
+                    <dd><a href="">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><s class="play"></s> 支付方式</dt>
+                    <dd><a href="">互联支付</a></dd>
+                    <dd><a href="">支付宝支付</a></dd>
+                    <dd><a href="">网银支付</a></dd>
+                </dl>
+                <dl>
+                    <dt><s class="zshz"></s> 招商合作</dt>
+                    <dd><a href="">开店流程</a></dd>
+                    <dd><a href="">联系我们</a></dd>
+                </dl>
+                <dl>
+                    <dt><s class="company"></s> 公司信息</dt>
+                    <dd><a href="">关于我们</a></dd>
+                    <dd><a href="">我们的承诺</a></dd>
+                    <dd><a href="">用户服务协议</a></dd>
+                </dl>
+            </div>
+        </div>
+     </div>
+ <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>
